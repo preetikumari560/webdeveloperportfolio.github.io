@@ -75,6 +75,7 @@ body {
 
 .bottom-container p {
   color: #EAF6F6;
+  padding-top: 15px;
 }
 
 
@@ -117,6 +118,10 @@ body {
   justify-self: end;
 }
 
+.contact-me h2
+{
+padding: 20px;
+}
 .contact-me p {
   margin: 40px auto 60px;
 }
@@ -250,9 +255,9 @@ nav ul li a {
 .skill-row2 {
 
   width: 60%;
-  margin-left: 300px;
-  margin-right: 50px;
-  margin: 100px 0px 250px 300px;
+ 
+ 
+  margin: 200px auto 250px 350px;
   text-align: left;
   line-height: 2;
 
@@ -267,7 +272,7 @@ nav ul li a {
 
 .skill-row4 {
   width: 50%;
-  margin: 100px 0px 100px 300px;
+  margin: 100px auto 100px 350px;
   text-align: left;
   line-height: 2;
 }
