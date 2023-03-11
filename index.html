@@ -43,7 +43,7 @@
         <img class="pic" src="images/preeti.png" alt="preeti_pic">
         <img class="top-cloud" src="images/cloud.png " alt="cloud_image">
         <h1>I'm Preeti.</h1>
-        <h2>a web developer</h2>
+        <h2>a <span id="typing-text"></span>|</h2>
         <img class="bottom-cloud" src="images/cloud.png " alt="cloud_image">
         <img class="mountain" src="images/port-hill.png" alt="mountain_image">
      
@@ -102,7 +102,7 @@
         <h2>Get In Touch</h2>
         <h3>Lorem ipsum dolor sit amet, non elit.</h3>
         <p>Lorem ipsum dolor sit amet, in quis, aenean amet. Phasellus sodales, tellus donec dui, ornare erat.</p>
-        <a class="btn" href="mailto:name@email.com">CONTACT ME</a>
+        <a class="btn" href="mailto:preeti650kumari@gmail.com">CONTACT ME</a>
       </div>
 
 
@@ -111,6 +111,32 @@
 </aside>
 </section>
 </main>
+<script>
+   var textArray = [" programmer...", " web developer..."];
+
+function typeWriter(textArray, i, j, typingCallback) {
+  if (i < textArray.length) {
+    var text = textArray[i];
+    if (j < text.length) {
+      document.getElementById("typing-text").innerHTML += text.charAt(j);
+      j++;
+      setTimeout(function() {
+        typeWriter(textArray, i, j, typingCallback)
+      }, 100);
+    } else {
+      if (typingCallback) {
+        typingCallback();
+      }
+      setTimeout(function() {
+        document.getElementById("typing-text").innerHTML = "";
+        typeWriter(textArray, (i + 1) % textArray.length, 0, typingCallback);
+      }, 1000);
+    }
+  }
+}
+
+typeWriter(textArray, 0, 0);
+</script>
 </body>
 
 <footer>
@@ -118,7 +144,7 @@
   <div class="bottom-container">
     <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
     <a class="footer-link" href="https://twitter.com/">Twitter</a>
-    <a class="footer-link" href="https://www.appbrewery.co/">Website</a>
+    <a class="footer-link" href="#">Website</a>
     <p>© Preeti_Goswami.</p>
   </div>
 </footer>
