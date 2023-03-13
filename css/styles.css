@@ -166,6 +166,10 @@ hr {
 
 }
 
+img{
+  -webkit-user-drag: none;   /* use to disable dragging of img */
+}
+
 #main-end {
   display: grid;
   grid-column: 100% 0.1%;
